@@ -21,16 +21,53 @@ public class SingaporeMrt {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        SingaporeMrt singaporeMrt = new SingaporeMrt();
-        singaporeMrt.testCase();
+        //SingaporeMrt singaporeMrt = new SingaporeMrt();
+        //singaporeMrt.testCase();
         
-        //MrtMap mrtMap = new MrtMap();
+        MrtMap mrtMap = new MrtMap();
         
-        //mrtMap.createStation("NE1", "HarbourFront");
-        // TODO ...
-        //mrtMap.createStation("NE11", "Woodleigh");
-        // TODO ...
-        //mrtMap.createStation("NE17", "Punggol");
+        // MRT Stations
+        MrtStation staHarbourFront = mrtMap.createStation("CC29/NE1", "HarbourFront");
+        MrtStation staOutramPark = mrtMap.createStation("EW16/NE3", "Outram Park");
+        MrtStation staChinatown = mrtMap.createStation("NE4", "Chinatown");
+        MrtStation staClarkeQuay = mrtMap.createStation("NE5", "Clarke Quay");
+        MrtStation staDhobyGhaut = mrtMap.createStation("CC1/NS24/NE6", "Dhoby Ghaut");
+        MrtStation staLittleIndia = mrtMap.createStation("NE7", "Little India");
+        MrtStation staFarrerPark = mrtMap.createStation("NE8", "Farrer Park");
+        MrtStation staBoonKeng = mrtMap.createStation("NE9", "Boon Keng");
+        MrtStation staPotongPasir = mrtMap.createStation("NE10", "Potong Pasir");
+        MrtStation staWoodleigh = mrtMap.createStation("NE11", "Woodleigh");
+        MrtStation staSerangoon = mrtMap.createStation("CC13/NE12", "Serangoon");
+        MrtStation staKovan = mrtMap.createStation("NE13", "Kovan");
+        MrtStation staHougang = mrtMap.createStation("NE14", "Hougang");
+        MrtStation staBuangkok = mrtMap.createStation("NE15", "Buangkok");
+        MrtStation staSengkang = mrtMap.createStation("NE16", "Sengkang");
+        MrtStation staPunggol = mrtMap.createStation("NE17", "Punggol");
+        
+        // North East Line
+        mrtMap.createRailway(staHarbourFront, staOutramPark, 3 /*minutes*/);
+        mrtMap.createRailway(staOutramPark, staChinatown, 2 /*minutes*/);
+        mrtMap.createRailway(staChinatown, staClarkeQuay, 2 /*minutes*/);
+        mrtMap.createRailway(staClarkeQuay, staDhobyGhaut, 2 /*minutes*/);
+        mrtMap.createRailway(staDhobyGhaut, staLittleIndia, 2 /*minutes*/);
+        mrtMap.createRailway(staLittleIndia, staFarrerPark, 2 /*minutes*/);
+        mrtMap.createRailway(staFarrerPark, staBoonKeng, 2 /*minutes*/);
+        mrtMap.createRailway(staBoonKeng, staPotongPasir, 2 /*minutes*/);
+        mrtMap.createRailway(staPotongPasir, staWoodleigh, 2 /*minutes*/);
+        mrtMap.createRailway(staWoodleigh, staSerangoon, 2 /*minutes*/);
+        mrtMap.createRailway(staSerangoon, staKovan, 3 /*minutes*/);
+        mrtMap.createRailway(staKovan, staHougang, 2 /*minutes*/);
+        mrtMap.createRailway(staHougang, staBuangkok, 2 /*minutes*/);
+        mrtMap.createRailway(staBuangkok, staSengkang, 3 /*minutes*/);
+        mrtMap.createRailway(staSengkang, staPunggol, 1 /*minutes*/);
+        
+        ArrayList<Node> shortestPath = Djikstra.run(mrtMap, staHarbourFront, staPotongPasir);
+        
+        for (Node node : shortestPath) {
+            MrtStation station = (MrtStation) node;
+            
+            System.out.println(station.getName());
+        }
     }
     
     public void testCase() {
