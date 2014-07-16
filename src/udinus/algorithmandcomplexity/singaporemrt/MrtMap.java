@@ -13,8 +13,7 @@ import udinus.algorithmandcomplexity.singaporemrt.graph.Graph;
  * @author dhanar10
  */
 public class MrtMap extends Graph {
-    public MrtStation createStation(String code, String name, 
-            String coordinates) {
+    public MrtStation createStation(String code, String name) {
         MrtStation station = new MrtStation(code, name);
        
         this.addNode(station);
