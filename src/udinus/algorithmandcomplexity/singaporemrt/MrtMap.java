@@ -22,8 +22,8 @@ public class MrtMap extends Graph {
         return station;
     }
     
-    public void createRailway(MrtStation fromMrtStation, 
-            MrtStation toMrtDistance) {
-        this.createEdge(fromMrtStation, toMrtDistance, 1); // TODO Calculate distance from station coordinates
+    public void createRailway(MrtStation fromMrtStation,  
+            MrtStation toMrtDistance, int distance) {
+        this.createEdge(fromMrtStation, toMrtDistance, distance);
     }
 }
