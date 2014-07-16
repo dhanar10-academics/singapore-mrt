@@ -26,11 +26,11 @@ public class SingaporeMrt {
         
         //MrtMap mrtMap = new MrtMap();
         
-        //mrtMap.createStation("NE1", "HarbourFront", "1°15′55″N 103°49′20″E");
+        //mrtMap.createStation("NE1", "HarbourFront");
         // TODO ...
-        //mrtMap.createStation("NE11", "Woodleigh", "1°20′21″N 103°52′15″E");
+        //mrtMap.createStation("NE11", "Woodleigh");
         // TODO ...
-        //mrtMap.createStation("NE17", "Punggol", "1°24′19″N 103°54′08″E");
+        //mrtMap.createStation("NE17", "Punggol");
     }
     
     public void testCase() {

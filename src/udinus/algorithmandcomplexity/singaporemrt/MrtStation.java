@@ -14,12 +14,10 @@ import udinus.algorithmandcomplexity.singaporemrt.graph.Node;
  */
 public class MrtStation extends Node {
     private String name;
-    private String coordinates;
     
-    public MrtStation(String code, String name, String coordinates) {
+    public MrtStation(String code, String name) {
         super(code);
         this.name = name;
-        this.coordinates = coordinates;
     }
 
     public String getCode() {
@@ -38,13 +36,5 @@ public class MrtStation extends Node {
     @Override
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getCoordinates() {
-        return coordinates;
-    }
-
-    public void setCoordinates(String coordinates) {
-        this.coordinates = coordinates;
     }
 }
