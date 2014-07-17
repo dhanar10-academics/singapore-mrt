@@ -169,7 +169,7 @@ public class SingaporeMrt {
         
         System.out.println();
         
-        System.out.println("Shortest Distance: " + 
+        System.out.println("Shortest Path Distance: " + 
                 shortestPath.get(shortestPath.size() - 1).getDistance() + 
                 " minute(s)");
     }
@@ -228,7 +228,7 @@ public class SingaporeMrt {
         
         System.out.println();
         
-        System.out.println("Shortest Distance: " + 
+        System.out.println("Shortest Path Distance: " + 
                 shortestPath.get(shortestPath.size() - 1).getDistance());
     }
 }
