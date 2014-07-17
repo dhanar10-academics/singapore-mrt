@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * @author dhanar10
  */
 public class Node {
-    private String name;
+    private final String name;
     private int distance;
     private Node previousNode;
     private final ArrayList<Edge> edges;
@@ -27,10 +27,6 @@ public class Node {
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
     
     public int getDistance() {
