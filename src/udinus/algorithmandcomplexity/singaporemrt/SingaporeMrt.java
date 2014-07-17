@@ -21,9 +21,9 @@ public class SingaporeMrt {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
-        SingaporeMrt singaporeMrt = new SingaporeMrt();
-        singaporeMrt.testCase();
-        System.exit(0);
+//        SingaporeMrt singaporeMrt = new SingaporeMrt();
+//        singaporeMrt.testCase();
+//        System.exit(0);
         
         System.out.println("Singapore MRT");
         System.out.println("");
