@@ -62,9 +62,7 @@ public class Djikstra {
                         "Distance: " + neighbouringNode.getDistance() + ")");
             }
         }
-        
-        System.out.println("");
-        
+
         ArrayList<Node> shortestPath = new ArrayList<>();
         
         Node n = endNode;
