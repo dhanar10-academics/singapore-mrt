@@ -13,29 +13,27 @@ import udinus.algorithmandcomplexity.singaporemrt.graph.Node;
  * @author dhanar10
  */
 public class MrtStation extends Node {
-    private final String stationCode;
-    private String stationName;
+    private String name;
     
-    public MrtStation(String stationCode, String stationName) {
-        super(stationCode);
-        this.stationCode = stationCode;
-        this.stationName = stationName;
+    public MrtStation(String code, String name) {
+        super(code);
+        this.name = name;
     }
 
-    public String getStationCode() {
-        return stationCode;
+    public String getCode() {
+        return super.getId();
     }
 
-    public String getStationName() {
-        return stationName;
+    public String getName() {
+        return name;
     }
 
-    public void setStationName(String stationName) {
-        this.stationName = stationName;
+    public void setName(String stationName) {
+        this.name = stationName;
     }
     
     @Override
     public String toString() {
-        return this.stationCode + " " + this.stationName;
+        return this.getCode() + " " + this.getName();
     }
 }

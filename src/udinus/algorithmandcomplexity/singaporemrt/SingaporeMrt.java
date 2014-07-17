@@ -16,14 +16,14 @@ import java.util.ArrayList;
  * @author dhanar10
  */
 public class SingaporeMrt {
-    private static MrtMap mrtMap;
+    private MrtMap mrtMap;
 
     /**
      * @param args the command line arguments
      * @throws java.lang.Exception
      */
     public static void main(String[] args) throws Exception {
-//        SingaporeMrt singaporeMrt = new SingaporeMrt();
+        SingaporeMrt singaporeMrt = new SingaporeMrt();
 //        singaporeMrt.testCase();
 //        System.exit(0);
         
@@ -31,8 +31,8 @@ public class SingaporeMrt {
         System.out.println("");
         
         // TODO Parse arguments and set here
-        Node fromStation = mrtMap.getStation("NE11");
-        Node toStation = mrtMap.getStation("CG2");
+        Node fromStation = singaporeMrt.mrtMap.getStation("NE11");
+        Node toStation = singaporeMrt.mrtMap.getStation("CG2");
         
         System.out.println("From Station: " + fromStation);
         System.out.println("To Station: " + toStation);
@@ -40,8 +40,8 @@ public class SingaporeMrt {
         
         System.out.println("Running Djikstra ...");
         
-        ArrayList<Node> shortestPath = Djikstra.run(mrtMap, fromStation, 
-                toStation);
+        ArrayList<Node> shortestPath = Djikstra.run(singaporeMrt.mrtMap, 
+                fromStation, toStation);
         
         System.out.println();
         
