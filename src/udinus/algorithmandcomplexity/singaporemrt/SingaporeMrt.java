@@ -99,7 +99,7 @@ public class SingaporeMrt {
         }
     }
     
-    public void testCase() {
+    public void testCase() throws Exception {
         Graph graph = new Graph();
         
         Node nodeA = graph.createNode("A");

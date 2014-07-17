@@ -20,8 +20,8 @@ import udinus.algorithmandcomplexity.singaporemrt.graph.Node;
 public class Djikstra {
     public static ArrayList<Node> run(Graph graph, Node startNode, 
             Node endNode) {
-        System.out.println("Start Node: " + startNode.getName());
-        System.out.println("End Node: " + endNode.getName());
+        System.out.println("Start Node: " + startNode);
+        System.out.println("End Node: " + endNode);
         
         System.out.println("");
         
@@ -39,7 +39,7 @@ public class Djikstra {
                 }
             }
             
-            System.out.println("Current: " + currentNode.getName() + 
+            System.out.println("Current: " + currentNode + 
                     ", " + "Distance: " + currentNode.getDistance());
             
             queue.remove(currentNode);
@@ -55,11 +55,11 @@ public class Djikstra {
                     neighbour.setPreviousNode(currentNode);
                 }
                 
-                System.out.println("Neighbour: " + neighbour.getName() + 
+                System.out.println("Neighbour: " + neighbour + 
                         ", " + "Distance: " + neighbour.getDistance() + 
                         (neighbour.getPreviousNode() != null ? 
                                 ", " + "Previous: " + 
-                                neighbour.getPreviousNode().getName() : ""));
+                                neighbour.getPreviousNode() : ""));
             }
         }
         
