@@ -20,15 +20,20 @@ public class Graph {
         this.nodes = new HashMap<>();
     }
     
-    public Node createNode(String name) {
+    public Node createNode(String name) throws Exception {
         Node node = new Node(name);
         
-        this.nodes.put(node.getName(), node);
+        this.addNode(node);
         
         return node;
     }
     
     public void addNode(Node node) {
+        if (this.nodes.containsKey(node.getName())) {
+            throw new UnsupportedOperationException("Replacing existing node "
+                    + "is currently not supported.");
+        }
+        
         this.nodes.put(node.getName(), node);
     }
     
