@@ -30,6 +30,8 @@ public class SingaporeMrt {
         MrtMap mrtMap = new MrtMap();
         
         // MRT Stations
+        // TODO CC
+        // TODO DT
         MrtStation staPasirRis = mrtMap.createStation("EW1", "Pasir Ris");
         MrtStation staTampines = mrtMap.createStation("EW2", "Tampines");
         MrtStation staSimei = mrtMap.createStation("EW3", "Simei");
@@ -59,7 +61,6 @@ public class SingaporeMrt {
         MrtStation staBoonLay = mrtMap.createStation("EW27", "Boon Lay");
         MrtStation staPioneer = mrtMap.createStation("EW28", "Pioneer");
         MrtStation staJooKoon = mrtMap.createStation("EW29", "Joo Koon");
-        
         MrtStation staHarbourFront = mrtMap.createStation("CC29/NE1", "HarbourFront");
         MrtStation staChinatown = mrtMap.createStation("NE4", "Chinatown");
         MrtStation staClarkeQuay = mrtMap.createStation("NE5", "Clarke Quay");
@@ -75,6 +76,17 @@ public class SingaporeMrt {
         MrtStation staBuangkok = mrtMap.createStation("NE15", "Buangkok");
         MrtStation staSengkang = mrtMap.createStation("NE16", "Sengkang");
         MrtStation staPunggol = mrtMap.createStation("NE17", "Punggol");
+        // TODO NS
+        
+        // Circle Line
+        // TODO ...
+        
+        // Downtown Line
+        // TODO ...
+        
+        // East West Line
+        mrtMap.createRailway(staPasirRis, staTampines, 2 /*minutes*/);
+        // TODO ...
         
         // North East Line
         mrtMap.createRailway(staHarbourFront, staOutramPark, 3 /*minutes*/);
@@ -92,6 +104,9 @@ public class SingaporeMrt {
         mrtMap.createRailway(staHougang, staBuangkok, 2 /*minutes*/);
         mrtMap.createRailway(staBuangkok, staSengkang, 3 /*minutes*/);
         mrtMap.createRailway(staSengkang, staPunggol, 1 /*minutes*/);
+        
+        // North South Line
+        // TODO ...
         
         Node startNode = staHarbourFront;
         Node endNode = staPotongPasir;
