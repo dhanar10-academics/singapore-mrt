@@ -7,6 +7,7 @@
 package udinus.algorithmandcomplexity.singaporemrt.graph;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  *
@@ -49,7 +50,7 @@ public class Node {
         this.edges.add(edge);
     }
     
-    public ArrayList<Edge> getEdges() {
+    public Collection<Edge> getAllEdges() {
         return this.edges;
     }
 }
