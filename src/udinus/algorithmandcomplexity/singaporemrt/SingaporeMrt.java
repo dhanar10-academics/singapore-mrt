@@ -27,8 +27,37 @@ public class SingaporeMrt {
         MrtMap mrtMap = new MrtMap();
         
         // MRT Stations
-        MrtStation staHarbourFront = mrtMap.createStation("CC29/NE1", "HarbourFront");
+        MrtStation staPasirRis = mrtMap.createStation("EW1", "Pasir Ris");
+        MrtStation staTampines = mrtMap.createStation("EW2", "Tampines");
+        MrtStation staSimei = mrtMap.createStation("EW3", "Simei");
+        MrtStation staTanahMerah = mrtMap.createStation("EW4", "Tanah Merah");
+        MrtStation staBedok = mrtMap.createStation("EW5", "Bedok");
+        MrtStation staKembangan = mrtMap.createStation("EW6", "Kembangan");
+        MrtStation staEunos = mrtMap.createStation("EW7", "Eunos");
+        MrtStation staPayaLebar = mrtMap.createStation("CC9/EW8", "Paya lebar");
+        MrtStation staAljunied = mrtMap.createStation("EW9", "Aljunied");
+        MrtStation staKallang = mrtMap.createStation("EW10", "Kallang");
+        MrtStation staLavender = mrtMap.createStation("EW11", "Lavender");
+        MrtStation staBugis = mrtMap.createStation("DT14/EW12", "Bugis");
+        MrtStation staCityHall = mrtMap.createStation("EW13", "City Hall");
+        MrtStation staRafflesPlace = mrtMap.createStation("EW14", "Raffles Place");
+        MrtStation staTanjongPagar = mrtMap.createStation("EW15", "Tanjong Pagar");
         MrtStation staOutramPark = mrtMap.createStation("EW16/NE3", "Outram Park");
+        MrtStation staTiongBahru = mrtMap.createStation("EW17", "Tiong Bahru");
+        MrtStation staRedHill = mrtMap.createStation("EW18", "RedHill");
+        MrtStation staQueenstown = mrtMap.createStation("EW19", "Queenstown");
+        MrtStation staCommonwealth = mrtMap.createStation("EW20", "Commonwealth");
+        MrtStation staBuonaVista = mrtMap.createStation("EW21", "Buona Vista");
+        MrtStation staDover = mrtMap.createStation("EW22", "Dover");
+        MrtStation staClementi = mrtMap.createStation("EW23", "Clementi");
+        MrtStation staJurongEast = mrtMap.createStation("EW24/NS1", "Jurong East");
+        MrtStation staChineseGarden = mrtMap.createStation("EW25", "Chinese Garden");
+        MrtStation staLakeSide = mrtMap.createStation("EW26", "Lake Side");
+        MrtStation staBoonLay = mrtMap.createStation("EW27", "Boon Lay");
+        MrtStation staPioneer = mrtMap.createStation("EW28", "Pioneer");
+        MrtStation staJooKoon = mrtMap.createStation("EW29", "Joo Koon");
+        
+        MrtStation staHarbourFront = mrtMap.createStation("CC29/NE1", "HarbourFront");
         MrtStation staChinatown = mrtMap.createStation("NE4", "Chinatown");
         MrtStation staClarkeQuay = mrtMap.createStation("NE5", "Clarke Quay");
         MrtStation staDhobyGhaut = mrtMap.createStation("CC1/NS24/NE6", "Dhoby Ghaut");
