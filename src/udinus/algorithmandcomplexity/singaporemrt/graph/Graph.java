@@ -29,16 +29,16 @@ public class Graph {
     }
     
     public void addNode(Node node) {
-        if (this.nodes.containsKey(node.getName())) {
+        if (this.nodes.containsKey(node.getId())) {
             throw new UnsupportedOperationException("Replacing existing node "
                     + "is currently not supported.");
         }
         
-        this.nodes.put(node.getName(), node);
+        this.nodes.put(node.getId(), node);
     }
     
-    public Node getNode(String name) {
-        return this.nodes.get(name);
+    public Node getNode(String id) {
+        return this.nodes.get(id);
     }
     
     public Collection<Node> getAllNodes() {

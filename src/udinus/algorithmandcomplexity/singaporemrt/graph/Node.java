@@ -14,20 +14,20 @@ import java.util.Collection;
  * @author dhanar10
  */
 public class Node {
-    private final String name;
+    private final String id;
     private int distance;
     private Node previousNode;
     private final ArrayList<Edge> edges;
     
-    public Node(String name) {
-        this.name = name;
+    public Node(String id) {
+        this.id = id;
         this.distance = Integer.MAX_VALUE;
         this.previousNode = null;
         this.edges = new ArrayList<>();
     }
 
-    public String getName() {
-        return name;
+    public String getId() {
+        return id;
     }
     
     public int getDistance() {
@@ -56,6 +56,6 @@ public class Node {
     
     @Override
     public String toString() {
-        return this.name;
+        return this.id;
     }
 }
