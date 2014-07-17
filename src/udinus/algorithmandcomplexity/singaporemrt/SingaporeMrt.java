@@ -20,13 +20,14 @@ public class SingaporeMrt {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        //SingaporeMrt singaporeMrt = new SingaporeMrt();
-        //singaporeMrt.testCase();
+    public static void main(String[] args) throws Exception {
+        SingaporeMrt singaporeMrt = new SingaporeMrt();
+        singaporeMrt.testCase();
+        System.exit(0);
         
         System.out.println("Singapore MRT");
         System.out.println("");
-        
+
         MrtMap mrtMap = new MrtMap();
         
         // MRT Stations
@@ -108,27 +109,28 @@ public class SingaporeMrt {
         // North South Line
         // TODO ...
         
-        Node startNode = staHarbourFront;
-        Node endNode = staPotongPasir;
+        Node fromStation = staHarbourFront;
+        Node toStation = staPotongPasir;
         
-        System.out.println("Start Node: " + startNode);
-        System.out.println("End Node: " + endNode);
+        System.out.println("From Station: " + fromStation);
+        System.out.println("To Station: " + toStation);
         System.out.println("");
         
         System.out.println("Running Djikstra ...");
         
-        ArrayList<Node> shortestPath = Djikstra.run(mrtMap, startNode, endNode);
+        ArrayList<Node> shortestPath = Djikstra.run(mrtMap, fromStation, toStation);
         
         System.out.println("Shortest Path:");
 
         for (Node node : shortestPath) {
-            MrtStation station = (MrtStation) node;
-            
-            System.out.println(station);
+            System.out.println(node);
         }
     }
     
     public void testCase() throws Exception {
+        System.out.println("Test Case");
+        System.out.println("");
+        
         Graph graph = new Graph();
         
         Node nodeA = graph.createNode("A");
@@ -158,20 +160,21 @@ public class SingaporeMrt {
         graph.createEdge(nodeH, nodeJ, 4);
         graph.createEdge(nodeI, nodeK, 1);
         
-        System.out.println("Start Node: " + nodeI);
-        System.out.println("End Node: " + nodeA);
+        Node fromNode = nodeI;
+        Node toNode = nodeA;
+        
+        System.out.println("From Node: " + fromNode);
+        System.out.println("To Node: " + toNode);
         System.out.println("");
         
         System.out.println("Running Djikstra ...");
         
-        ArrayList<Node> shortestPath = Djikstra.run(graph, nodeI, nodeA);
+        ArrayList<Node> shortestPath = Djikstra.run(graph, fromNode, toNode);
         
-        System.out.print("Shortest Path: ");
+        System.out.println("Shortest Path: ");
         
         for (Node node : shortestPath) {
-            System.out.print(node.getName() + " ");
+            System.out.println(node);
         }
-        
-        System.out.println("");
     }
 }
