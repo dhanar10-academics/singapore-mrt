@@ -24,6 +24,9 @@ public class SingaporeMrt {
         //SingaporeMrt singaporeMrt = new SingaporeMrt();
         //singaporeMrt.testCase();
         
+        System.out.println("Singapore MRT");
+        System.out.println("");
+        
         MrtMap mrtMap = new MrtMap();
         
         // MRT Stations
@@ -90,12 +93,23 @@ public class SingaporeMrt {
         mrtMap.createRailway(staBuangkok, staSengkang, 3 /*minutes*/);
         mrtMap.createRailway(staSengkang, staPunggol, 1 /*minutes*/);
         
-        ArrayList<Node> shortestPath = Djikstra.run(mrtMap, staHarbourFront, staPotongPasir);
+        Node startNode = staHarbourFront;
+        Node endNode = staPotongPasir;
         
+        System.out.println("Start Node: " + startNode);
+        System.out.println("End Node: " + endNode);
+        System.out.println("");
+        
+        System.out.println("Running Djikstra ...");
+        
+        ArrayList<Node> shortestPath = Djikstra.run(mrtMap, startNode, endNode);
+        
+        System.out.println("Shortest Path:");
+
         for (Node node : shortestPath) {
             MrtStation station = (MrtStation) node;
             
-            System.out.println(station.getName());
+            System.out.println(station);
         }
     }
     
@@ -128,6 +142,12 @@ public class SingaporeMrt {
         graph.createEdge(nodeH, nodeI, 1);
         graph.createEdge(nodeH, nodeJ, 4);
         graph.createEdge(nodeI, nodeK, 1);
+        
+        System.out.println("Start Node: " + nodeI);
+        System.out.println("End Node: " + nodeA);
+        System.out.println("");
+        
+        System.out.println("Running Djikstra ...");
         
         ArrayList<Node> shortestPath = Djikstra.run(graph, nodeI, nodeA);
         

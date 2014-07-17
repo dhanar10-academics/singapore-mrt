@@ -20,11 +20,6 @@ import udinus.algorithmandcomplexity.singaporemrt.graph.Node;
 public class Djikstra {
     public static ArrayList<Node> run(Graph graph, Node startNode, 
             Node endNode) {
-        System.out.println("Start Node: " + startNode);
-        System.out.println("End Node: " + endNode);
-        
-        System.out.println("");
-        
         startNode.setDistance(0);
         
         HashSet<Node> queue = new HashSet<>(graph.getAllNodes());
@@ -39,27 +34,32 @@ public class Djikstra {
                 }
             }
             
-            System.out.println("Current: " + currentNode + 
-                    ", " + "Distance: " + currentNode.getDistance());
+            System.out.println("* Current: " + currentNode + " (" +
+                        (currentNode.getPreviousNode() != null ? 
+                                "Previous: " + 
+                                        currentNode.getPreviousNode() + 
+                                        ", " :  "") +
+                        "Distance: " + currentNode.getDistance() + ")");
             
             queue.remove(currentNode);
             
             for (Edge edge : currentNode.getAllEdges()) {
-                Node neighbour = edge.getNeighbouringNode();
+                Node neighbouringNode = edge.getNeighbouringNode();
                 int distance = edge.getDistance();
                 
                 int altDistance = currentNode.getDistance() + distance;
                                 
-                if (altDistance < neighbour.getDistance()) {
-                    neighbour.setDistance(altDistance);
-                    neighbour.setPreviousNode(currentNode);
+                if (altDistance < neighbouringNode.getDistance()) {
+                    neighbouringNode.setDistance(altDistance);
+                    neighbouringNode.setPreviousNode(currentNode);
                 }
                 
-                System.out.println("Neighbour: " + neighbour + 
-                        ", " + "Distance: " + neighbour.getDistance() + 
-                        (neighbour.getPreviousNode() != null ? 
-                                ", " + "Previous: " + 
-                                neighbour.getPreviousNode() : ""));
+                System.out.println("** Neighbour: " + neighbouringNode + " (" +
+                        (neighbouringNode.getPreviousNode() != null ? 
+                                "Previous: " + 
+                                        neighbouringNode.getPreviousNode() + 
+                                        ", " :  "") +
+                        "Distance: " + neighbouringNode.getDistance() + ")");
             }
         }
         
