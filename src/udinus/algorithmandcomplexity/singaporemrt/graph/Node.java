@@ -53,4 +53,9 @@ public class Node {
     public Collection<Edge> getAllEdges() {
         return this.edges;
     }
+    
+    @Override
+    public String toString() {
+        return this.name;
+    }
 }

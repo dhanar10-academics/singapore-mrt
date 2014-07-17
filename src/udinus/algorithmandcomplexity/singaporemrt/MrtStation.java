@@ -33,4 +33,9 @@ public class MrtStation extends Node {
     public void setStationName(String stationName) {
         this.stationName = stationName;
     }
+    
+    @Override
+    public String toString() {
+        return this.stationCode + " " + this.stationName;
+    }
 }
