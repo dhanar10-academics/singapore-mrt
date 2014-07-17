@@ -22,14 +22,15 @@ public class SingaporeMrt {
      * @param args the command line arguments
      * @throws java.lang.Exception
      */
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {   
         SingaporeMrt singaporeMrt = new SingaporeMrt();
+        
 //        singaporeMrt.testCase();
 //        System.exit(0);
         
         System.out.println("Singapore MRT");
         System.out.println("");
-        
+
         // TODO Parse arguments and set here
         Node fromStation = singaporeMrt.mrtMap.getStation("NE11");
         Node toStation = singaporeMrt.mrtMap.getStation("CG2");
