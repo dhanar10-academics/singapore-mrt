@@ -16,6 +16,7 @@ import java.util.ArrayList;
  * @author dhanar10
  */
 public class SingaporeMrt {
+    private static MrtMap mrtMap;
 
     /**
      * @param args the command line arguments
@@ -28,8 +29,37 @@ public class SingaporeMrt {
         
         System.out.println("Singapore MRT");
         System.out.println("");
+        
+        // TODO Parse arguments and set here
+        Node fromStation = mrtMap.getStation("NE11");
+        Node toStation = mrtMap.getStation("CG2");
+        
+        System.out.println("From Station: " + fromStation);
+        System.out.println("To Station: " + toStation);
+        System.out.println("");
+        
+        System.out.println("Running Djikstra ...");
+        
+        ArrayList<Node> shortestPath = Djikstra.run(mrtMap, fromStation, 
+                toStation);
+        
+        System.out.println();
+        
+        System.out.println("Shortest Path:");
 
-        MrtMap mrtMap = new MrtMap();
+        for (Node node : shortestPath) {
+            System.out.println(node);
+        }
+        
+        System.out.println();
+        
+        System.out.println("Shortest Path Distance: " + 
+                shortestPath.get(shortestPath.size() - 1).getDistance() + 
+                " minute(s)");
+    }
+    
+    public SingaporeMrt() {
+        this.mrtMap = new MrtMap();
         
         // MRT Stations
         MrtStation staPayaLebar = mrtMap.createStation("CC9/EW8", "Paya lebar");
@@ -146,32 +176,6 @@ public class SingaporeMrt {
         
         // North South Line
         // TODO Implement North South Line railway here
-        
-        Node fromStation = staWoodleigh; // TODO Read arguments and set here
-        Node toStation = staChangiAirport; // TODO Read arguments and set here
-        
-        System.out.println("From Station: " + fromStation);
-        System.out.println("To Station: " + toStation);
-        System.out.println("");
-        
-        System.out.println("Running Djikstra ...");
-        
-        ArrayList<Node> shortestPath = Djikstra.run(mrtMap, fromStation, 
-                toStation);
-        
-        System.out.println();
-        
-        System.out.println("Shortest Path:");
-
-        for (Node node : shortestPath) {
-            System.out.println(node);
-        }
-        
-        System.out.println();
-        
-        System.out.println("Shortest Path Distance: " + 
-                shortestPath.get(shortestPath.size() - 1).getDistance() + 
-                " minute(s)");
     }
     
     public void testCase() throws Exception { // TODO Implement unit test

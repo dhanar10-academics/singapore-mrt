@@ -21,6 +21,10 @@ public class MrtMap extends Graph {
         return station;
     }
     
+    public MrtStation getStation(String code) {
+        return (MrtStation) this.getNode(code);
+    }
+    
     public void createRailway(MrtStation fromStation,  
             MrtStation toStation, int distance) {
         this.createEdge(fromStation, toStation, distance);

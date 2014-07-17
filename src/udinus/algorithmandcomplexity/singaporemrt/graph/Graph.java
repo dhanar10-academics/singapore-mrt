@@ -37,6 +37,10 @@ public class Graph {
         this.nodes.put(node.getName(), node);
     }
     
+    public Node getNode(String name) {
+        return this.nodes.get(name);
+    }
+    
     public Collection<Node> getAllNodes() {
         return this.nodes.values();
     }
