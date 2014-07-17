@@ -13,7 +13,7 @@ import udinus.algorithmandcomplexity.singaporemrt.graph.Node;
  * @author dhanar10
  */
 public class MrtStation extends Node {
-    private String stationCode;
+    private final String stationCode;
     private String stationName;
     
     public MrtStation(String stationCode, String stationName) {
@@ -24,10 +24,6 @@ public class MrtStation extends Node {
 
     public String getStationCode() {
         return stationCode;
-    }
-
-    public void setStationCode(String stationCode) {
-        this.stationCode = stationCode;
     }
 
     public String getStationName() {
