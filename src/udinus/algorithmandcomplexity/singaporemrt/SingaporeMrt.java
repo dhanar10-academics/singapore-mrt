@@ -37,10 +37,10 @@ public class SingaporeMrt {
         MrtStation staTaiseng = mrtMap.createStation("CC11", "Tai seng");
         MrtStation staBartley = mrtMap.createStation("CC12", "Bartley");
         MrtStation staSerangoon = mrtMap.createStation("CC13/NE12", "Serangoon");
-        // TODO CC
+        // TODO Implement more CC stations here
         MrtStation staExpo = mrtMap.createStation("CG1", "Expo");
         MrtStation staChangiAirport = mrtMap.createStation("CG2", "Changi Airport");
-        // TODO DT
+        // TODO Implement DT stations here
         MrtStation staPasirRis = mrtMap.createStation("EW1", "Pasir Ris");
         MrtStation staTampines = mrtMap.createStation("EW2", "Tampines");
         MrtStation staSimei = mrtMap.createStation("EW3", "Simei");
@@ -83,17 +83,17 @@ public class SingaporeMrt {
         MrtStation staBuangkok = mrtMap.createStation("NE15", "Buangkok");
         MrtStation staSengkang = mrtMap.createStation("NE16", "Sengkang");
         MrtStation staPunggol = mrtMap.createStation("NE17", "Punggol");
-        // TODO NS
+        // TODO Implement NS stations here
         
         // Circle Line
         mrtMap.createRailway(staPayaLebar, staMacPherson, 2 /*minutes*/);
         mrtMap.createRailway(staMacPherson, staTaiseng, 2 /*minutes*/);
         mrtMap.createRailway(staTaiseng, staBartley, 2 /*minutes*/);
         mrtMap.createRailway(staBartley, staSerangoon, 3 /*minutes*/);
-        // TODO ...
+        // TODO Implement more Circle Line railway here
         
         // Downtown Line
-        // TODO ...
+        // TODO Implement Downtown Line railway here
         
         // East West Line
         mrtMap.createRailway(staPasirRis, staTampines, 2 /*minutes*/);
@@ -145,10 +145,10 @@ public class SingaporeMrt {
         mrtMap.createRailway(staSengkang, staPunggol, 1 /*minutes*/);
         
         // North South Line
-        // TODO ...
+        // TODO Implement North South Line railway here
         
-        Node fromStation = staWoodleigh;
-        Node toStation = staTanahMerah;
+        Node fromStation = staWoodleigh; // TODO Read arguments and set here
+        Node toStation = staChangiAirport; // TODO Read arguments and set here
         
         System.out.println("From Station: " + fromStation);
         System.out.println("To Station: " + toStation);
@@ -174,7 +174,7 @@ public class SingaporeMrt {
                 " minute(s)");
     }
     
-    public void testCase() throws Exception {
+    public void testCase() throws Exception { // TODO Implement unit test
         System.out.println("Test Case");
         System.out.println("");
         
