@@ -45,7 +45,7 @@ public class Djikstra {
             queue.remove(currentNode);
             
             for (Edge edge : currentNode.getAllEdges()) {
-                Node neighbour = edge.getNode();
+                Node neighbour = edge.getNeighbouringNode();
                 int distance = edge.getDistance();
                 
                 int altDistance = currentNode.getDistance() + distance;

@@ -11,20 +11,20 @@ package udinus.algorithmandcomplexity.singaporemrt.graph;
  * @author dhanar10
  */
 public class Edge {
-    private Node node;
+    private Node neighbouringNode;
     private int distance;
     
-    public Edge(Node node, int distance) {
-        this.node = node;
+    public Edge(Node neighbouringNode, int distance) {
+        this.neighbouringNode = neighbouringNode;
         this.distance = distance;
     }
 
-    public Node getNode() {
-        return node;
+    public Node getNeighbouringNode() {
+        return neighbouringNode;
     }
 
-    public void setNode(Node node) {
-        this.node = node;
+    public void setNeigbouringNode(Node node) {
+        this.neighbouringNode = node;
     }
 
     public int getDistance() {
