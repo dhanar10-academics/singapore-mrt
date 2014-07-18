@@ -8,7 +8,7 @@ package udinus.algorithmandcomplexity.singaporemrt;
 
 import udinus.algorithmandcomplexity.singaporemrt.graph.Graph;
 import udinus.algorithmandcomplexity.singaporemrt.graph.Node;
-import udinus.algorithmandcomplexity.singaporemrt.algorithm.Djikstra;
+import udinus.algorithmandcomplexity.singaporemrt.algorithm.Dijkstra;
 import java.util.ArrayList;
 
 /**
@@ -41,7 +41,7 @@ public class SingaporeMrt {
         
         System.out.println("Running Djikstra ...");
         
-        ArrayList<Node> shortestPath = Djikstra.run(singaporeMrt.mrtMap, 
+        ArrayList<Node> shortestPath = Dijkstra.run(singaporeMrt.mrtMap, 
                 fromStation, toStation);
         
         System.out.println();
@@ -221,7 +221,7 @@ public class SingaporeMrt {
         
         System.out.println("Running Djikstra ...");
         
-        ArrayList<Node> shortestPath = Djikstra.run(graph, fromNode, toNode);
+        ArrayList<Node> shortestPath = Dijkstra.run(graph, fromNode, toNode);
         
         System.out.println();
         

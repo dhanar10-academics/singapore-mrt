@@ -17,7 +17,7 @@ import udinus.algorithmandcomplexity.singaporemrt.graph.Node;
  *
  * @author dhanar10
  */
-public class Djikstra {
+public class Dijkstra {
     public static ArrayList<Node> run(Graph graph, Node startNode, 
             Node endNode) {
         startNode.setDistance(0);
