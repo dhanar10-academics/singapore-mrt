@@ -65,10 +65,11 @@ public class SingaporeMrt {
         // MRT Stations
         MrtStation staPayaLebar = mrtMap.createStation("CC9/EW8", "Paya lebar");
         MrtStation staMacPherson = mrtMap.createStation("CC10", "MacPherson");
-        MrtStation staTaiseng = mrtMap.createStation("CC11", "Tai seng");
+        MrtStation staTaiseng = mrtMap.createStation("CC11", "Tasi seng");
         MrtStation staBartley = mrtMap.createStation("CC12", "Bartley");
         MrtStation staSerangoon = mrtMap.createStation("CC13/NE12", "Serangoon");
         // TODO Implement more CC stations here
+        MrtStation staLorongChuan = mrtMap.createStation("CC14", "Lorong Chuan");
         MrtStation staExpo = mrtMap.createStation("CG1", "Expo");
         MrtStation staChangiAirport = mrtMap.createStation("CG2", "Changi Airport");
         // TODO Implement DT stations here
