@@ -63,16 +63,46 @@ public class SingaporeMrt {
         this.mrtMap = new MrtMap();
         
         // MRT Stations
+		
+		// CC Route
         MrtStation staPayaLebar = mrtMap.createStation("CC9/EW8", "Paya lebar");
         MrtStation staMacPherson = mrtMap.createStation("CC10", "MacPherson");
-        MrtStation staTaiseng = mrtMap.createStation("CC11", "Tai Seng");
+        MrtStation staTaiseng = mrtMap.createStation("CC11", "Tai seng");
         MrtStation staBartley = mrtMap.createStation("CC12", "Bartley");
         MrtStation staSerangoon = mrtMap.createStation("CC13/NE12", "Serangoon");
+
         // TODO Implement more CC stations here
         MrtStation staLorongChuan = mrtMap.createStation("CC14", "Lorong Chuan");
+        MrtStation staBishan = mrtMap.createStation("CC15/NS17", "Bishan");
+        MrtStation staMarymount = mrtMap.createStation("CC16", "Marymount");
+        MrtStation staCaldecott = mrtMap.createStation("CC17", "Caldecott"); // TS9 - Under Contruction (UC)
+		// CC18 - #NA
+        MrtStation staBotanicGardens = mrtMap.createStation("CC19", "Botanic Gardens");
+        MrtStation staFarrerRoad = mrtMap.createStation("CC20", "Farrer Road");
+        MrtStation staHollandVillage = mrtMap.createStation("CC21", "Holland Village");
+        MrtStation staBuonaVista = mrtMap.createStation("CC22/EW21", "Buona Vista");
+        MrtStation staOneNorth = mrtMap.createStation("CC23", "one-north");
+        MrtStation staKentRidge = mrtMap.createStation("CC24", "Kent Ridge");
+        MrtStation staHawParVilla = mrtMap.createStation("CC25", "Haw Par Villa");
+        MrtStation staPasirPanjang = mrtMap.createStation("CC26", "Pasir Panjang");
+        MrtStation staLabradorPark = mrtMap.createStation("CC27", "Labrador Park");
+        MrtStation staTelokBlangah = mrtMap.createStation("CC28", "Telok Blangah");
+        MrtStation staHarbourFront = mrtMap.createStation("CC29/NE1", "HarbourFront"); 
+		// end CC
+		
         MrtStation staExpo = mrtMap.createStation("CG1", "Expo");
         MrtStation staChangiAirport = mrtMap.createStation("CG2", "Changi Airport");
+
         // TODO Implement DT stations here
+        // DT Route
+		MrtStation staBugis = mrtMap.createStation("DT14/EW12", "Bugis");
+        MrtStation staPromenade = mrtMap.createStation("DT15/CC4", "Promenade");
+        MrtStation staBayfront = mrtMap.createStation("DT16/CE1", "Bayfront");
+        MrtStation staDowntown = mrtMap.createStation("DT17", "Downtown");
+        MrtStation staTelokAyer = mrtMap.createStation("DT18", "Telok Ayer");
+        MrtStation staChinaTown = mrtMap.createStation("DT19/NE4", "Chinatown");
+
+		// EW Route
         MrtStation staPasirRis = mrtMap.createStation("EW1", "Pasir Ris");
         MrtStation staTampines = mrtMap.createStation("EW2", "Tampines");
         MrtStation staSimei = mrtMap.createStation("EW3", "Simei");
@@ -83,7 +113,6 @@ public class SingaporeMrt {
         MrtStation staAljunied = mrtMap.createStation("EW9", "Aljunied");
         MrtStation staKallang = mrtMap.createStation("EW10", "Kallang");
         MrtStation staLavender = mrtMap.createStation("EW11", "Lavender");
-        MrtStation staBugis = mrtMap.createStation("DT14/EW12", "Bugis");
         MrtStation staCityHall = mrtMap.createStation("EW13/NS25", "City Hall");
         MrtStation staRafflesPlace = mrtMap.createStation("EW14/NS26", "Raffles Place");
         MrtStation staTanjongPagar = mrtMap.createStation("EW15", "Tanjong Pagar");
@@ -92,7 +121,6 @@ public class SingaporeMrt {
         MrtStation staRedHill = mrtMap.createStation("EW18", "RedHill");
         MrtStation staQueenstown = mrtMap.createStation("EW19", "Queenstown");
         MrtStation staCommonwealth = mrtMap.createStation("EW20", "Commonwealth");
-        MrtStation staBuonaVista = mrtMap.createStation("CC22/EW21", "Buona Vista");
         MrtStation staDover = mrtMap.createStation("EW22", "Dover");
         MrtStation staClementi = mrtMap.createStation("EW23", "Clementi");
         MrtStation staJurongEast = mrtMap.createStation("EW24/NS1", "Jurong East");
@@ -101,7 +129,8 @@ public class SingaporeMrt {
         MrtStation staBoonLay = mrtMap.createStation("EW27", "Boon Lay");
         MrtStation staPioneer = mrtMap.createStation("EW28", "Pioneer");
         MrtStation staJooKoon = mrtMap.createStation("EW29", "Joo Koon");
-        MrtStation staHarbourFront = mrtMap.createStation("CC29/NE1", "HarbourFront");
+		
+		// NE Route
         MrtStation staChinatown = mrtMap.createStation("NE4", "Chinatown");
         MrtStation staClarkeQuay = mrtMap.createStation("NE5", "Clarke Quay");
         MrtStation staDhobyGhaut = mrtMap.createStation("CC1/NS24/NE6", "Dhoby Ghaut");
@@ -115,8 +144,35 @@ public class SingaporeMrt {
         MrtStation staBuangkok = mrtMap.createStation("NE15", "Buangkok");
         MrtStation staSengkang = mrtMap.createStation("NE16", "Sengkang");
         MrtStation staPunggol = mrtMap.createStation("NE17", "Punggol");
+		
         // TODO Implement NS stations here
+		// NS Route
+        MrtStation staBukitBatok = mrtMap.createStation("NS2", "Bukit Batok");
+        MrtStation staBukitGombak = mrtMap.createStation("NS3", "Bukit Gombak");
+        MrtStation staChoaChuKang = mrtMap.createStation("NS4", "Choa Chu Kang");
+        MrtStation staYewTee = mrtMap.createStation("NS5", "Yew Tee");
+        MrtStation staKranji = mrtMap.createStation("NS6", "Kranji");
+        MrtStation staMarsiling = mrtMap.createStation("NS8", "Marsiling");
+        MrtStation staWoodlands = mrtMap.createStation("NS9", "Woodlands");  // NS9/TS2 - UC 
+        MrtStation staAdmiralty = mrtMap.createStation("NS10", "Admiralty");
+        MrtStation staSembawang = mrtMap.createStation("NS11", "Sembawang");
+		// NS12 - #NA
+        MrtStation staYishun = mrtMap.createStation("NS13", "Yishun");
+        MrtStation staKhatib = mrtMap.createStation("NS14", "Khatib");
+        MrtStation staYioChuKang = mrtMap.createStation("NS15", "Yio Chu Kang");
+        MrtStation staAngMoKio = mrtMap.createStation("NS16", "Ang Mo Kio");
+        MrtStation staBraddell = mrtMap.createStation("NS18", "Braddell");
+        MrtStation staToaPayoh = mrtMap.createStation("NS19", "Toa Payoh");
+        MrtStation staNovena = mrtMap.createStation("NS20", "Novena");
+        MrtStation staNewton = mrtMap.createStation("NS21", "Newton");  // NS21/DT11 - UC
+        MrtStation staOrchad = mrtMap.createStation("NS22", "Orchad");  // TS14/NS22 - UC
+        MrtStation staSomerset = mrtMap.createStation("NS23", "Somerset");
+        MrtStation staMarinaBay = mrtMap.createStation("NS27/CE2", "Marina Bay");  // TS20/NS27/CE2 - UC
+		
         
+		
+		
+		
         // Circle Line
         mrtMap.createRailway(staPayaLebar, staMacPherson, 2 /*minutes*/);
         mrtMap.createRailway(staMacPherson, staTaiseng, 2 /*minutes*/);
@@ -126,6 +182,7 @@ public class SingaporeMrt {
         
         // Downtown Line
         // TODO Implement Downtown Line railway here
+		
         
         // East West Line
         mrtMap.createRailway(staPasirRis, staTampines, 2 /*minutes*/);
