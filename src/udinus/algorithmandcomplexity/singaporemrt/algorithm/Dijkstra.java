@@ -19,7 +19,15 @@ import udinus.algorithmandcomplexity.singaporemrt.graph.Node;
  */
 public class Dijkstra {
     public static ArrayList<Node> run(Graph graph, Node startNode, 
-            Node endNode) {
+            Node endNode) throws Exception {
+        if (startNode == null) {
+            throw new Exception("startNode cannot be null!");
+        }
+        
+        if (endNode == null) {
+            throw new Exception("endNode cannot be null!");
+        }
+        
         startNode.setDistance(0);
         
         HashSet<Node> queue = new HashSet<>(graph.getAllNodes());
