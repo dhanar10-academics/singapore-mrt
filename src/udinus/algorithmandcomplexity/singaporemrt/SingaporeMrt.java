@@ -30,10 +30,25 @@ public class SingaporeMrt {
         
         System.out.println("Singapore MRT");
         System.out.println("");
+        
+        String fromStationCode = "NE11";
+        String toStationCode = "EW16";
+        
+        if (fromStationCode.equals("EW16") || fromStationCode.equals("NE3")) {
+             fromStationCode = "EW16/NE3";
+        }
+        
+        // TODO fromStationCode conversion
+        
+        if (toStationCode.equals("EW16") || toStationCode.equals("NE3")) {
+             toStationCode = "EW16/NE3";
+        }
+        
+        // TODO toStationCode conversion
 
         // TODO Parse arguments and set here
-        Node fromStation = singaporeMrt.mrtMap.getStation("NE11");
-        Node toStation = singaporeMrt.mrtMap.getStation("CG2");
+        Node fromStation = singaporeMrt.mrtMap.getStation(fromStationCode);
+        Node toStation = singaporeMrt.mrtMap.getStation(toStationCode);
         
         System.out.println("From Station: " + fromStation);
         System.out.println("To Station: " + toStation);
