@@ -80,6 +80,12 @@ public class SingaporeMrt {
         // MRT Stations
 		
 		// CC Route
+        MrtStation staBrasBasah = mrtMap.createStation("CC2", "Bras Basah");
+        MrtStation staEsplanade = mrtMap.createStation("CC3", "Esplanade");
+        MrtStation staNicollHighway = mrtMap.createStation("CC5", "Nicoll Highway");
+        MrtStation staStadium = mrtMap.createStation("CC6", "Stadium");
+        MrtStation staMountbatten = mrtMap.createStation("CC7", "Mountbatten");
+        MrtStation staDakota = mrtMap.createStation("CC8", "Dakota");       
         MrtStation staPayaLebar = mrtMap.createStation("CC9/EW8", "Paya lebar");
         MrtStation staMacPherson = mrtMap.createStation("CC10", "MacPherson");
         MrtStation staTaiseng = mrtMap.createStation("CC11", "Tai seng");
@@ -110,12 +116,11 @@ public class SingaporeMrt {
 
         // TODO Implement DT stations here
         // DT Route
-		MrtStation staBugis = mrtMap.createStation("DT14/EW12", "Bugis");
+        MrtStation staBugis = mrtMap.createStation("DT14/EW12", "Bugis");
         MrtStation staPromenade = mrtMap.createStation("DT15/CC4", "Promenade");
         MrtStation staBayfront = mrtMap.createStation("DT16/CE1", "Bayfront");
         MrtStation staDowntown = mrtMap.createStation("DT17", "Downtown");
         MrtStation staTelokAyer = mrtMap.createStation("DT18", "Telok Ayer");
-        MrtStation staChinaTown = mrtMap.createStation("DT19/NE4", "Chinatown");
 
 		// EW Route
         MrtStation staPasirRis = mrtMap.createStation("EW1", "Pasir Ris");
@@ -186,6 +191,14 @@ public class SingaporeMrt {
 		
         	
         // Circle Line
+        mrtMap.createRailway(staDhobyGhaut, staBrasBasah, 2 /*minutes*/);
+        mrtMap.createRailway(staBrasBasah, staEsplanade, 2 /*minutes*/);
+        mrtMap.createRailway(staEsplanade, staPromenade, 1 /*minutes*/);
+        mrtMap.createRailway(staPromenade, staNicollHighway, 2 /*minutes*/);
+        mrtMap.createRailway(staNicollHighway, staStadium, 2 /*minutes*/);
+        mrtMap.createRailway(staStadium, staMountbatten, 2 /*minutes*/);
+        mrtMap.createRailway(staMountbatten, staDakota, 2 /*minutes*/);
+        mrtMap.createRailway(staDakota, staPayaLebar, 2 /*minutes*/);
         mrtMap.createRailway(staPayaLebar, staMacPherson, 2 /*minutes*/);
         mrtMap.createRailway(staMacPherson, staTaiseng, 2 /*minutes*/);
         mrtMap.createRailway(staTaiseng, staBartley, 2 /*minutes*/);
@@ -196,8 +209,8 @@ public class SingaporeMrt {
         mrtMap.createRailway(staBishan, staMarymount, 3 /*minutes*/);
         mrtMap.createRailway(staMarymount, staCaldecott, 2 /*minutes*/);
         mrtMap.createRailway(staCaldecott, staBotanicGardens, 5 /*minutes*/);
-        mrtMap.createRailway(staBotanicGardens, staFarrerRoad, 3 /*minutes*/);
-        mrtMap.createRailway(staFarrerRoad, staHollandVillage, 2 /*minutes*/);
+        mrtMap.createRailway(staBotanicGardens, staFarrerRoad, 2 /*minutes*/);
+        mrtMap.createRailway(staFarrerRoad, staHollandVillage, 3 /*minutes*/);
         mrtMap.createRailway(staHollandVillage, staBuonaVista, 2 /*minutes*/);
         mrtMap.createRailway(staBuonaVista, staOneNorth, 2 /*minutes*/);
         mrtMap.createRailway(staOneNorth, staKentRidge, 2 /*minutes*/);
@@ -207,6 +220,8 @@ public class SingaporeMrt {
         mrtMap.createRailway(staLabradorPark, staTelokBlangah, 3 /*minutes*/);
         mrtMap.createRailway(staTelokBlangah, staHarbourFront, 3 /*minutes*/);
         
+        mrtMap.createRailway(staMarinaBay, staBayfront, 2 /*minutes*/);
+
         // Downtown Line
         // TODO Implement Downtown Line railway here
         mrtMap.createRailway(staBugis, staPromenade, 2 /*minutes*/);
@@ -267,19 +282,19 @@ public class SingaporeMrt {
         
         // North South Line
         // TODO Implement North South Line railway here
-        mrtMap.createRailway(staJurongEast, staBukitBatok, 2 /*minutes*/);
+        mrtMap.createRailway(staJurongEast, staBukitBatok, 3 /*minutes*/);
         mrtMap.createRailway(staBukitBatok, staBukitGombak, 2 /*minutes*/);
-        mrtMap.createRailway(staBukitGombak, staChoaChuKang, 2 /*minutes*/);
-        mrtMap.createRailway(staChoaChuKang, staYewTee, 3 /*minutes*/);
+        mrtMap.createRailway(staBukitGombak, staChoaChuKang, 4 /*minutes*/);
+        mrtMap.createRailway(staChoaChuKang, staYewTee, 2 /*minutes*/);
         mrtMap.createRailway(staYewTee, staKranji, 5 /*minutes*/);
         mrtMap.createRailway(staKranji, staMarsiling, 2 /*minutes*/);
         mrtMap.createRailway(staMarsiling, staWoodlands, 3 /*minutes*/);
         mrtMap.createRailway(staWoodlands, staAdmiralty, 2 /*minutes*/);
         mrtMap.createRailway(staAdmiralty, staSembawang, 3 /*minutes*/);
-        mrtMap.createRailway(staSembawang, staYishun, 3 /*minutes*/);
-        mrtMap.createRailway(staYishun, staKhatib, 3 /*minutes*/);
-        mrtMap.createRailway(staKhatib, staYioChuKang, 3 /*minutes*/);
-        mrtMap.createRailway(staYioChuKang, staAngMoKio, 4 /*minutes*/);
+        mrtMap.createRailway(staSembawang, staYishun, 4 /*minutes*/);
+        mrtMap.createRailway(staYishun, staKhatib, 2 /*minutes*/);
+        mrtMap.createRailway(staKhatib, staYioChuKang, 6 /*minutes*/);
+        mrtMap.createRailway(staYioChuKang, staAngMoKio, 2 /*minutes*/);
         mrtMap.createRailway(staAngMoKio, staBishan, 2 /*minutes*/);
         mrtMap.createRailway(staBishan, staBraddell, 2 /*minutes*/);
         mrtMap.createRailway(staBraddell, staToaPayoh, 2 /*minutes*/);
@@ -289,7 +304,7 @@ public class SingaporeMrt {
         mrtMap.createRailway(staOrchard, staSomerset, 2 /*minutes*/);
         mrtMap.createRailway(staSomerset, staDhobyGhaut, 1 /*minutes*/);
         mrtMap.createRailway(staDhobyGhaut, staCityHall, 2 /*minutes*/);
-        mrtMap.createRailway(staCityHall, staRafflesPlace, 2 /*minutes*/);
+        //mrtMap.createRailway(staCityHall, staRafflesPlace, 2 /*minutes*/);
         mrtMap.createRailway(staRafflesPlace, staMarinaBay, 2 /*minutes*/);
         
     }
