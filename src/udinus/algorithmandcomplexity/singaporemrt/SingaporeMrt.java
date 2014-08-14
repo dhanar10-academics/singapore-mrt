@@ -10,6 +10,7 @@ import udinus.algorithmandcomplexity.singaporemrt.graph.Graph;
 import udinus.algorithmandcomplexity.singaporemrt.graph.Node;
 import udinus.algorithmandcomplexity.singaporemrt.algorithm.Dijkstra;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -28,11 +29,24 @@ public class SingaporeMrt {
 //      singaporeMrt.testCase();
 //      System.exit(0);
         
+        Node fromStation = (Node) JOptionPane.showInputDialog(null, 
+                "From Station", "Singapore MRT", JOptionPane.QUESTION_MESSAGE, 
+                null, singaporeMrt.mrtMap.getAllNodes().toArray(), 
+                singaporeMrt.mrtMap.getStation("NE11"));
+        
+        Node toStation = (Node) JOptionPane.showInputDialog(null, 
+                "To Station", "Singapore MRT", JOptionPane.QUESTION_MESSAGE, 
+                null, singaporeMrt.mrtMap.getAllNodes().toArray(), 
+                singaporeMrt.mrtMap.getStation("CG2"));
+        
+        if (fromStation == null || toStation == null) {
+            System.exit(0);
+        }
+        
         System.out.println("Singapore MRT");
         System.out.println("");
         
-        // TODO Parse arguments and set here
-        
+        /*
         String fromStationCode = "CC22";
         String toStationCode = "EW8";
         
@@ -153,6 +167,7 @@ public class SingaporeMrt {
 
         Node fromStation = singaporeMrt.mrtMap.getStation(fromStationCode);
         Node toStation = singaporeMrt.mrtMap.getStation(toStationCode);
+        */
         
         System.out.println("From Station: " + fromStation);
         System.out.println("To Station: " + toStation);
