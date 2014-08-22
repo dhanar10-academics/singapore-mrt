@@ -51,6 +51,11 @@ public class Dijkstra {
             
             queue.remove(currentNode);
             
+            // Shortcut for determining shortest path. Uncomment to test.
+            //if (currentNode == endNode) {
+            //    break;
+            //}
+            
             for (Edge edge : currentNode.getAllEdges()) {
                 Node neighbouringNode = edge.getNeighbouringNode();
                 int distance = edge.getDistance();
