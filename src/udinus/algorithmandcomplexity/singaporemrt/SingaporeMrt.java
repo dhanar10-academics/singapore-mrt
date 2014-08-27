@@ -46,129 +46,6 @@ public class SingaporeMrt {
         System.out.println("Singapore MRT");
         System.out.println("");
         
-        /*
-        String fromStationCode = "CC22";
-        String toStationCode = "EW8";
-        
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("EW16") || fromStationCode.equals("NE3")) {
-             fromStationCode = "EW16/NE3";
-        }        
-        
-        if (toStationCode.equals("EW16") || toStationCode.equals("NE3")) {
-             toStationCode = "EW16/NE3";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("CC9") || fromStationCode.equals("EW8")) {
-             fromStationCode = "CC9/EW8";
-        }        
-        if (toStationCode.equals("CC9") || toStationCode.equals("EW8")) {
-             toStationCode = "CC9/EW8";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("CC13") || fromStationCode.equals("NE12")) {
-             fromStationCode = "CC13/NE12";
-        }        
-        if (toStationCode.equals("CC13") || toStationCode.equals("NE12")) {
-             toStationCode = "CC13/NE12";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("CC15") || fromStationCode.equals("NS17")) {
-             fromStationCode = "CC15/NS17";
-        }        
-        if (toStationCode.equals("CC15") || toStationCode.equals("NS17")) {
-             toStationCode = "CC15/NS17";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("CC22") || fromStationCode.equals("EW21")) {
-             fromStationCode = "CC22/EW21";
-        }        
-        if (toStationCode.equals("CC22") || toStationCode.equals("EW21")) {
-             toStationCode = "CC22/EW21";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("CC29") || fromStationCode.equals("NE1")) {
-             fromStationCode = "CC29/NE1";
-        }        
-        if (toStationCode.equals("CC29") || toStationCode.equals("NE1")) {
-             toStationCode = "CC29/NE1";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("DT14") || fromStationCode.equals("EW12")) {
-             fromStationCode = "DT14/EW12";
-        }        
-        if (toStationCode.equals("DT14") || toStationCode.equals("EW12")) {
-             toStationCode = "DT14/EW12";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("DT15") || fromStationCode.equals("CC4")) {
-             fromStationCode = "DT15/CC4";
-        }        
-        if (toStationCode.equals("DT15") || toStationCode.equals("CC4")) {
-             toStationCode = "DT15/CC4";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("DT16") || fromStationCode.equals("CE1")) {
-             fromStationCode = "DT16/CE1";
-        }        
-        if (toStationCode.equals("DT16") || toStationCode.equals("CE1")) {
-             toStationCode = "DT16/CE1";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("DT19") || fromStationCode.equals("NE4")) {
-             fromStationCode = "DT19/NE4";
-        }        
-        if (toStationCode.equals("DT19") || toStationCode.equals("NE4")) {
-             toStationCode = "DT19/NE4";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("EW13") || fromStationCode.equals("NS25")) {
-             fromStationCode = "EW13/NS25";
-        }        
-        if (toStationCode.equals("EW13") || toStationCode.equals("NS25")) {
-             toStationCode = "EW13/NS25";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("EW14") || fromStationCode.equals("NS26")) {
-             fromStationCode = "EW14/NS26";
-        }        
-        if (toStationCode.equals("EW14") || toStationCode.equals("NS26")) {
-             toStationCode = "EW14/NS26";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("EW16") || fromStationCode.equals("NE3")) {
-             fromStationCode = "EW16/NE3";
-        }        
-        if (toStationCode.equals("EW16") || toStationCode.equals("NE3")) {
-             toStationCode = "EW16/NE3";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("EW24") || fromStationCode.equals("NS1")) {
-             fromStationCode = "EW24/NS1";
-        }        
-        if (toStationCode.equals("EW24") || toStationCode.equals("NS1")) {
-             toStationCode = "EW24/NS1";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("CC1") || fromStationCode.equals("NS24") || fromStationCode.equals("NE6")) {
-             fromStationCode = "CC1/NS24/NE6";
-        }        
-        if (toStationCode.equals("CC1") || toStationCode.equals("NS24") || toStationCode.equals("NE6")) {
-             toStationCode = "CC1/NS24/NE6";
-        }
-        //------------------------------------------------------------------
-        if (fromStationCode.equals("NS27") || fromStationCode.equals("CE2")) {
-             fromStationCode = "NS27/CE2";
-        }        
-        if (toStationCode.equals("NS27") || toStationCode.equals("CE2")) {
-             toStationCode = "NS27/CE2";
-        }
-        //------------------------------------------------------------------
-
-        Node fromStation = singaporeMrt.mrtMap.getStation(fromStationCode);
-        Node toStation = singaporeMrt.mrtMap.getStation(toStationCode);
-        */
-        
         System.out.println("From Station: " + fromStation);
         System.out.println("To Station: " + toStation);
         System.out.println("");
@@ -213,8 +90,8 @@ public class SingaporeMrt {
         MrtStation staLorongChuan = mrtMap.createStation("CC14", "Lorong Chuan");
         MrtStation staBishan = mrtMap.createStation("CC15/NS17", "Bishan");
         MrtStation staMarymount = mrtMap.createStation("CC16", "Marymount");
-        MrtStation staCaldecott = mrtMap.createStation("CC17", "Caldecott"); // TS9 - Under Contruction (UC)
-        // CC18 - #NA
+        MrtStation staCaldecott = mrtMap.createStation("CC17", "Caldecott");
+        // CC18 N/A
         MrtStation staBotanicGardens = mrtMap.createStation("CC19", "Botanic Gardens");
         MrtStation staFarrerRoad = mrtMap.createStation("CC20", "Farrer Road");
         MrtStation staHollandVillage = mrtMap.createStation("CC21", "Holland Village");
@@ -227,6 +104,7 @@ public class SingaporeMrt {
         MrtStation staTelokBlangah = mrtMap.createStation("CC28", "Telok Blangah");
         MrtStation staHarbourFront = mrtMap.createStation("CC29/NE1", "HarbourFront"); 
         
+        // Changi Airport
         MrtStation staExpo = mrtMap.createStation("CG1", "Expo");
         MrtStation staChangiAirport = mrtMap.createStation("CG2", "Changi Airport");
 
@@ -287,10 +165,10 @@ public class SingaporeMrt {
         MrtStation staYewTee = mrtMap.createStation("NS5", "Yew Tee");
         MrtStation staKranji = mrtMap.createStation("NS6", "Kranji");
         MrtStation staMarsiling = mrtMap.createStation("NS8", "Marsiling");
-        MrtStation staWoodlands = mrtMap.createStation("NS9", "Woodlands");  // NS9/TS2 - UC 
+        MrtStation staWoodlands = mrtMap.createStation("NS9", "Woodlands"); 
         MrtStation staAdmiralty = mrtMap.createStation("NS10", "Admiralty");
         MrtStation staSembawang = mrtMap.createStation("NS11", "Sembawang");
-        // NS12 - #NA
+        // NS12 N/A
         MrtStation staYishun = mrtMap.createStation("NS13", "Yishun");
         MrtStation staKhatib = mrtMap.createStation("NS14", "Khatib");
         MrtStation staYioChuKang = mrtMap.createStation("NS15", "Yio Chu Kang");
@@ -298,10 +176,10 @@ public class SingaporeMrt {
         MrtStation staBraddell = mrtMap.createStation("NS18", "Braddell");
         MrtStation staToaPayoh = mrtMap.createStation("NS19", "Toa Payoh");
         MrtStation staNovena = mrtMap.createStation("NS20", "Novena");
-        MrtStation staNewton = mrtMap.createStation("NS21", "Newton");  // NS21/DT11 - UC
-        MrtStation staOrchard = mrtMap.createStation("NS22", "Orchard");  // TS14/NS22 - UC
+        MrtStation staNewton = mrtMap.createStation("NS21", "Newton"); 
+        MrtStation staOrchard = mrtMap.createStation("NS22", "Orchard");
         MrtStation staSomerset = mrtMap.createStation("NS23", "Somerset");
-        MrtStation staMarinaBay = mrtMap.createStation("NS27/CE2", "Marina Bay");  // TS20/NS27/CE2 - UC
+        MrtStation staMarinaBay = mrtMap.createStation("NS27/CE2", "Marina Bay");
         
         // MRT Railways
 
@@ -418,7 +296,7 @@ public class SingaporeMrt {
         
     }
     
-    public void testCase() throws Exception { // TODO Implement unit test
+    public void testCase() throws Exception {
         System.out.println("Test Case");
         System.out.println("");
         
