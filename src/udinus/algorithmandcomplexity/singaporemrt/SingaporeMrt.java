@@ -10,6 +10,7 @@ import udinus.algorithmandcomplexity.singaporemrt.graph.Graph;
 import udinus.algorithmandcomplexity.singaporemrt.graph.Node;
 import udinus.algorithmandcomplexity.singaporemrt.algorithm.Dijkstra;
 import java.util.ArrayList;
+import java.util.Arrays;
 import javax.swing.JOptionPane;
 
 /**
@@ -29,10 +30,13 @@ public class SingaporeMrt {
 //      singaporeMrt.testCase();
 //      System.exit(0);
         
+        Object[] allMrtStations = singaporeMrt.mrtMap.getAllNodes().toArray();
+        
+        Arrays.sort(allMrtStations);
+        
         Node fromStation = (Node) JOptionPane.showInputDialog(null, 
                 "From Station", "Singapore MRT", JOptionPane.QUESTION_MESSAGE, 
-                null, singaporeMrt.mrtMap.getAllNodes().toArray(), 
-                singaporeMrt.mrtMap.getStation("NE11"));
+                null, allMrtStations, allMrtStations[0]);
         
         if (fromStation == null) {
             System.exit(0);
@@ -40,8 +44,7 @@ public class SingaporeMrt {
         
         Node toStation = (Node) JOptionPane.showInputDialog(null, 
                 "To Station", "Singapore MRT", JOptionPane.QUESTION_MESSAGE, 
-                null, singaporeMrt.mrtMap.getAllNodes().toArray(), 
-                singaporeMrt.mrtMap.getStation("CG2"));
+                null, allMrtStations, allMrtStations[0]);
         
         if (toStation == null) {
             System.exit(0);

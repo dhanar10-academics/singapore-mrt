@@ -12,7 +12,7 @@ import udinus.algorithmandcomplexity.singaporemrt.graph.Node;
  *
  * @author dhanar10
  */
-public class MrtStation extends Node {
+public class MrtStation extends Node implements Comparable<MrtStation>{
     private String name;
     
     public MrtStation(String code, String name) {
@@ -35,5 +35,10 @@ public class MrtStation extends Node {
     @Override
     public String toString() {
         return this.getCode() + " " + this.getName();
+    }
+
+    @Override
+    public int compareTo(MrtStation mrtStation) {
+        return this.getName().compareTo(mrtStation.getName());
     }
 }
