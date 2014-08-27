@@ -34,12 +34,16 @@ public class SingaporeMrt {
                 null, singaporeMrt.mrtMap.getAllNodes().toArray(), 
                 singaporeMrt.mrtMap.getStation("NE11"));
         
+        if (fromStation == null) {
+            System.exit(0);
+        }
+        
         Node toStation = (Node) JOptionPane.showInputDialog(null, 
                 "To Station", "Singapore MRT", JOptionPane.QUESTION_MESSAGE, 
                 null, singaporeMrt.mrtMap.getAllNodes().toArray(), 
                 singaporeMrt.mrtMap.getStation("CG2"));
         
-        if (fromStation == null || toStation == null) {
+        if (toStation == null) {
             System.exit(0);
         }
         
