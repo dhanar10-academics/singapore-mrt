@@ -84,7 +84,7 @@ public class SingaporeMrt {
         MrtStation staDakota = mrtMap.createStation("CC8", "Dakota");       
         MrtStation staPayaLebar = mrtMap.createStation("CC9/EW8", "Paya lebar");
         MrtStation staMacPherson = mrtMap.createStation("CC10", "MacPherson");
-        MrtStation staTaiseng = mrtMap.createStation("CC11", "Tai seng");
+        MrtStation staTaiseng = mrtMap.createStation("CC11", "Tai Seng");
         MrtStation staBartley = mrtMap.createStation("CC12", "Bartley");
         MrtStation staSerangoon = mrtMap.createStation("CC13/NE12", "Serangoon");
         MrtStation staLorongChuan = mrtMap.createStation("CC14", "Lorong Chuan");
@@ -96,7 +96,7 @@ public class SingaporeMrt {
         MrtStation staFarrerRoad = mrtMap.createStation("CC20", "Farrer Road");
         MrtStation staHollandVillage = mrtMap.createStation("CC21", "Holland Village");
         MrtStation staBuonaVista = mrtMap.createStation("CC22/EW21", "Buona Vista");
-        MrtStation staOneNorth = mrtMap.createStation("CC23", "one-north");
+        MrtStation staOneNorth = mrtMap.createStation("CC23", "One-north");
         MrtStation staKentRidge = mrtMap.createStation("CC24", "Kent Ridge");
         MrtStation staHawParVilla = mrtMap.createStation("CC25", "Haw Par Villa");
         MrtStation staPasirPanjang = mrtMap.createStation("CC26", "Pasir Panjang");
