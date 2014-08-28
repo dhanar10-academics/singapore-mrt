@@ -27,7 +27,8 @@ public class SingaporeMrt {
     public static void main(String[] args) throws Exception {   
         SingaporeMrt singaporeMrt = new SingaporeMrt();
         
-//      singaporeMrt.testCase();
+//      singaporeMrt.testCase1();
+//      singaporeMrt.testCase2();
 //      System.exit(0);
         
         Object[] allMrtStations = singaporeMrt.mrtMap.getAllNodes().toArray();
@@ -303,7 +304,7 @@ public class SingaporeMrt {
         
     }
     
-    public void testCase() throws Exception {
+    public void testCase1() throws Exception {
         System.out.println("Test Case");
         System.out.println("");
         
@@ -338,6 +339,71 @@ public class SingaporeMrt {
         
         Node fromNode = nodeI;
         Node toNode = nodeA;
+        
+        System.out.println("From Node: " + fromNode);
+        System.out.println("To Node: " + toNode);
+        System.out.println();
+        
+        System.out.println("Running Djikstra ...");
+        
+        ArrayList<Node> shortestPath = Dijkstra.run(graph, fromNode, toNode);
+        
+        System.out.println();
+        
+        System.out.println("Shortest Path:");
+        
+        for (Node node : shortestPath) {
+            System.out.println(node);
+        }
+        
+        System.out.println();
+        
+        System.out.println("Shortest Path Distance: " + 
+                shortestPath.get(shortestPath.size() - 1).getDistance());
+    }
+    
+    public void testCase2() throws Exception {
+        System.out.println("Test Case");
+        System.out.println("");
+        
+        Graph graph = new Graph();
+        
+        Node nodeA = graph.createNode("A");
+        Node nodeB = graph.createNode("B");
+        Node nodeC = graph.createNode("C");
+        Node nodeD = graph.createNode("D");
+        Node nodeE = graph.createNode("E");
+        Node nodeF = graph.createNode("F");
+        Node nodeG = graph.createNode("G");
+        Node nodeH = graph.createNode("H");
+        Node nodeI = graph.createNode("I");
+        Node nodeJ = graph.createNode("J");
+        Node nodeK = graph.createNode("K");
+        Node nodeL = graph.createNode("L");
+        Node nodeM = graph.createNode("M");
+        Node nodeN = graph.createNode("N");
+        Node nodeO = graph.createNode("O");
+        Node nodeP = graph.createNode("P");
+        
+        graph.createEdge(nodeA, nodeB, 1);
+        graph.createEdge(nodeB, nodeC, 5);
+        graph.createEdge(nodeC, nodeD, 5);
+        graph.createEdge(nodeD, nodeE, 5);
+        graph.createEdge(nodeE, nodeF, 5);
+        graph.createEdge(nodeG, nodeH, 5);
+        graph.createEdge(nodeH, nodeI, 1);
+        graph.createEdge(nodeB, nodeJ, 2);
+        graph.createEdge(nodeJ, nodeK, 2);
+        graph.createEdge(nodeK, nodeL, 2);
+        graph.createEdge(nodeL, nodeM, 2);
+        graph.createEdge(nodeM, nodeE, 2);
+        graph.createEdge(nodeE, nodeN, 2);
+        graph.createEdge(nodeN, nodeO, 2);
+        graph.createEdge(nodeO, nodeP, 2);
+        graph.createEdge(nodeP, nodeH, 2);
+        
+        Node fromNode = nodeA;
+        Node toNode = nodeI;
         
         System.out.println("From Node: " + fromNode);
         System.out.println("To Node: " + toNode);
